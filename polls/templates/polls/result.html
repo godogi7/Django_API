@@ -1,0 +1,9 @@
+<h1>{{ question.question_text }}</h1><br>
+{% for choice in question.choice_set.all %}
+
+    <label>
+        <!-- 초이스 문구 + 몇 개 선택됐는지 보여줌 -->
+        {{ choice.choice_text }} -- {{ choice.votes }}
+    </label>
+    <br>
+{% endfor %}
